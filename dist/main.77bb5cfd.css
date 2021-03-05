@@ -1,0 +1,987 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  background: #4b21ff;
+  font-size: 18px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 100%; }
+
+.menu-icon {
+  position: fixed;
+  top: 36px;
+  right: 36px;
+  padding: 20px;
+  z-index: 11;
+  cursor: pointer; }
+  .menu-icon .fas {
+    font-size: 2rem;
+    color: #4b21ff; }
+  .menu-icon .fa-times {
+    color: white; }
+
+.primary-btn {
+  text-decoration: none;
+  background: #4b21ff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: #fefefe;
+  padding: 15px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out; }
+  .primary-btn:hover {
+    background: black; }
+
+.ghost-btn {
+  text-decoration: none;
+  border: 4px solid #4b21ff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  color: #4b21ff;
+  padding: 12px 27px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out; }
+  .ghost-btn:hover {
+    border-color: black;
+    color: black; }
+
+#menu {
+  background: #4b21ff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  transform: translate3d(-100%, 0, 0);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.3s ease-in-out; }
+  #menu nav {
+    width: 400px;
+    text-align: center; }
+    #menu nav a {
+      font-size: 2.3rem;
+      padding: 1rem;
+      display: block;
+      text-decoration: none;
+      color: white; }
+      #menu nav a:hover {
+        color: #F8FF21; }
+
+.primary-btn, .ghost-btn {
+  margin-bottom: 20px;
+  margin-right: 15px; }
+
+.menu-active .menu-icon .fas {
+  color: white; }
+
+.menu-active #menu {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  transform: translate3d(0, 0, 0); }
+
+.scroll-section {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 56px; }
+
+.home .logo {
+  text-transform: uppercase;
+  border: 5px solid white;
+  height: 130px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 0; }
+
+.home .info-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 54px;
+  width: 35%; }
+  .home .info-section .info-box {
+    position: absolute;
+    bottom: 60px; }
+    .home .info-section .info-box h4 {
+      font-size: 1.2rem;
+      color: #fefefe;
+      margin: .7rem 0; }
+    .home .info-section .info-box p {
+      font-size: .9rem;
+      font-weight: 300;
+      color: #fefefe;
+      margin: .2rem 0 1.6rem; }
+    .home .info-section .info-box span {
+      color: #fefefe;
+      margin: 1.3rem 0;
+      display: inline-block; }
+  .home .info-section .icon-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 10px; }
+    .home .info-section .icon-section a:hover {
+      color: #d930c0; }
+    .home .info-section .icon-section a:first-child {
+      padding: 0 10px 0 0; }
+
+.home .content-area {
+  background: #fefefe;
+  margin-left: 35%;
+  width: 65%;
+  background: white;
+  height: 100%; }
+  .home .content-area .img-container {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    height: 100%; }
+    .home .content-area .img-container .user-img {
+      position: absolute;
+      top: 56px;
+      left: -250px;
+      width: 500px;
+      height: calc(100% - 112px);
+      background-image: url(/matthew-moncada.b9576c8b.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -webkit-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+      -moz-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+      box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34); }
+  .home .content-area .profile-section {
+    display: inline-block;
+    vertical-align: top;
+    padding: 20% 0 0 0;
+    max-width: 500px; }
+    .home .content-area .profile-section .profile h1 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 1rem; }
+      .home .content-area .profile-section .profile h1 span {
+        color: #4b21ff; }
+    .home .content-area .profile-section .profile h5 {
+      font-size: 1.1rem;
+      margin: 0 0 2rem; }
+    .home .content-area .profile-section .profile p {
+      color: #a9a9a9;
+      font-weight: 300;
+      line-height: 1.4;
+      margin: 0 0 2rem; }
+
+@media (max-width: 767px) {
+  .home .menu-icon {
+    top: -3px;
+    right: 20px;
+    color: white; }
+    .home .menu-icon .fas {
+      color: white; }
+  .home .content-area {
+    height: auto; }
+    .home .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .home .info-section {
+    padding: 10px 20px;
+    position: static; }
+    .home .info-section .logo {
+      height: 50px;
+      width: 70px;
+      font-size: 1rem; }
+    .home .info-section .info-box {
+      display: none; }
+  .home .content-area {
+    margin-left: 0;
+    width: 100%; }
+    .home .content-area .img-container {
+      padding: 56px 20px 0; }
+      .home .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .home .content-area .profile-section {
+      width: 70%;
+      float: right;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .home .info-section {
+    width: 30%;
+    padding: 56px 30px; }
+    .home .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .home .content-area {
+    margin-left: 30%;
+    width: 70%; }
+    .home .content-area .img-container {
+      padding: 56px 20px 0; }
+      .home .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .home .content-area .profile-section {
+      width: 70%;
+      float: right;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .home .content-area .img-container .user-img {
+      position: static;
+      width: 100%; }
+  .home .content-area .profile-section {
+    width: 70%;
+    float: left;
+    padding: 20% 20px 0;
+    max-width: 800px; } }
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .home .info-section {
+    width: 20%;
+    padding: 56px 30px; }
+    .home .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .home .content-area {
+    width: 80%;
+    margin-left: 20%; }
+    .home .content-area .img-container {
+      padding: 56px 20px 0;
+      float: left; }
+      .home .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .home .content-area .profile-section {
+      width: 70%;
+      float: left;
+      padding: 20% 60px 0;
+      max-width: 800px; } }
+
+.resume .logo {
+  text-transform: uppercase;
+  border: 5px solid white;
+  height: 130px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 0; }
+
+.resume .info-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 54px;
+  width: 20%; }
+  .resume .info-section .info-box {
+    position: absolute;
+    bottom: 60px; }
+    .resume .info-section .info-box h4 {
+      font-size: 1.2rem;
+      color: #fefefe;
+      margin: .7rem 0; }
+    .resume .info-section .info-box p {
+      font-size: .9rem;
+      font-weight: 300;
+      color: #fefefe;
+      margin: .2rem 0 1.6rem; }
+    .resume .info-section .info-box span {
+      color: #fefefe;
+      margin: 1.3rem 0;
+      display: inline-block; }
+  .resume .info-section .icon-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 10px; }
+    .resume .info-section .icon-section a:hover {
+      color: #d930c0; }
+    .resume .info-section .icon-section a:first-child {
+      padding: 0 10px 0 0; }
+
+.resume .content-area {
+  background: #fefefe;
+  margin-left: 20%;
+  width: 80%;
+  min-width: 300px;
+  background: white;
+  height: 100%;
+  overflow: hidden; }
+  .resume .content-area .category {
+    margin-bottom: 56px; }
+    .resume .content-area .category h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 56px; }
+    .resume .content-area .category .xp-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 56px;
+      grid-row-gap: 30px;
+      max-width: 1000px; }
+      .resume .content-area .category .xp-section .xp-box {
+        padding: 30px;
+        transition: all .5s ease-in-out;
+        cursor: pointer; }
+        .resume .content-area .category .xp-section .xp-box:hover {
+          -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+          -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12); }
+        .resume .content-area .category .xp-section .xp-box h5 {
+          font-weight: 500;
+          font-size: 1.3rem;
+          margin-bottom: 1.4rem; }
+        .resume .content-area .category .xp-section .xp-box p {
+          font-weight: 300;
+          font-size: 1rem;
+          margin-bottom: 1rem; }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  html, body {
+    height: auto; }
+  .resume .menu-icon {
+    top: -3px;
+    right: 20px;
+    color: white; }
+    .resume .menu-icon .fas {
+      color: white; }
+  .resume .content-area {
+    height: auto; }
+    .resume .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .resume .info-section {
+    padding: 10px 30px;
+    position: static; }
+    .resume .info-section .logo {
+      height: 50px;
+      width: 70px;
+      font-size: 1rem; }
+    .resume .info-section .info-box {
+      display: none; }
+  .resume .content-area {
+    margin-left: 0;
+    width: 100%; }
+    .resume .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .resume .content-area .scroll-section {
+      padding: 50px 20px;
+      width: 100%;
+      height: auto;
+      overflow: auto; }
+    .resume .content-area .category {
+      width: 100%; }
+      .resume .content-area .category .xp-section {
+        grid-template-columns: 1fr; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .resume .info-section {
+    width: 30%;
+    padding: 56px 30px; }
+    .resume .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .resume .content-area {
+    height: auto;
+    width: 70%;
+    margin-left: 30%; }
+    .resume .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .resume .content-area .category {
+      width: 100%; }
+      .resume .content-area .category .xp-section {
+        grid-template-columns: 1fr; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .resume .info-section {
+    width: 30%; }
+    .resume .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .resume .content-area {
+    height: auto;
+    width: 70%;
+    margin-left: 30%; }
+    .resume .content-area:after {
+      content: "";
+      display: table;
+      clear: both; } }
+
+@media (min-width: 1200px) {
+  .resume .info-section {
+    width: 20%;
+    padding: 56px 30px; }
+    .resume .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .resume .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .resume .content-area .img-container .form-section {
+      left: -157px;
+      width: 400px; }
+  .resume .content-area .resume-section {
+    width: 70%;
+    float: left;
+    padding: 20% 60px 0;
+    max-width: 800px; } }
+
+@media (min-width: 1500px) {
+  .resume .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .resume .content-area .img-container .form-section {
+      left: -250px;
+      width: 500px; }
+  .resume .content-area .resume-section {
+    width: 70%;
+    float: left;
+    padding: 20% 60px 0;
+    max-width: 800px; } }
+
+.portfolio .logo {
+  text-transform: uppercase;
+  border: 5px solid white;
+  height: 130px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 0; }
+
+.portfolio .info-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 54px;
+  width: 20%; }
+  .portfolio .info-section .info-box {
+    position: absolute;
+    bottom: 60px; }
+    .portfolio .info-section .info-box h4 {
+      font-size: 1.2rem;
+      color: #fefefe;
+      margin: .7rem 0; }
+    .portfolio .info-section .info-box p {
+      font-size: .9rem;
+      font-weight: 300;
+      color: #fefefe;
+      margin: .2rem 0 1.6rem; }
+    .portfolio .info-section .info-box span {
+      color: #fefefe;
+      margin: 1.3rem 0;
+      display: inline-block; }
+  .portfolio .info-section .icon-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 10px; }
+    .portfolio .info-section .icon-section a:hover {
+      color: #d930c0; }
+    .portfolio .info-section .icon-section a:first-child {
+      padding: 0 10px 0 0; }
+
+.portfolio .content-area {
+  background: #fefefe;
+  margin-left: 20%;
+  width: 80%;
+  min-width: 300px;
+  background: white;
+  height: 100%;
+  overflow: hidden; }
+  .portfolio .content-area .portfolio-section {
+    margin-bottom: 56px; }
+    .portfolio .content-area .portfolio-section h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 56px; }
+    .portfolio .content-area .portfolio-section .project-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .portfolio .content-area .portfolio-section .project-section .project-box {
+        position: relative;
+        padding: 30px;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 400px; }
+        .portfolio .content-area .portfolio-section .project-section .project-box:hover {
+          -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+          -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12); }
+        .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg {
+          background: #efefef;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          transition: all .3s ease-in-out;
+          overflow: hidden; }
+          .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg:hover {
+            opacity: .9; }
+            .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg:hover .project-info .project-details {
+              transform: translate3d(0, 0, 0);
+              opacity: 1; }
+            .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg:hover .project-info .project-title {
+              transform: translate3d(0, 0, 0);
+              opacity: 1; }
+          .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg .project-info {
+            padding: 56px;
+            position: absolute;
+            bottom: 0;
+            width: 100%; }
+            .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg .project-info .project-details {
+              position: relative;
+              font-size: 1.1rem;
+              text-transform: capitalize;
+              margin: 0 0 1rem;
+              transform: translate3d(-200px, 0, 0);
+              opacity: 0;
+              transition: all .3s ease-in; }
+            .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg .project-info .project-title {
+              font-size: 1.8rem;
+              text-transform: uppercase;
+              font-weight: 700;
+              transform: translate3d(-100px, 0, 0);
+              opacity: 0;
+              transition: all .3s ease-in .1s; }
+            .portfolio .content-area .portfolio-section .project-section .project-box .grey-bg .project-info .fa-long-arrow-alt-right {
+              position: absolute;
+              bottom: 56px;
+              right: 56px;
+              font-size: 3rem; }
+        .portfolio .content-area .portfolio-section .project-section .project-box h5 {
+          font-weight: 500;
+          font-size: 1.3rem;
+          margin-bottom: 1.4rem; }
+        .portfolio .content-area .portfolio-section .project-section .project-box p {
+          font-weight: 300;
+          font-size: 1rem;
+          margin-bottom: 1rem; }
+
+@media (max-width: 767px) {
+  .portfolio .menu-icon {
+    top: -3px;
+    right: 20px;
+    color: white; }
+    .portfolio .menu-icon .fas {
+      color: white; }
+  .portfolio .content-area {
+    height: auto; }
+    .portfolio .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .portfolio .info-section {
+    padding: 10px 20px;
+    position: static; }
+    .portfolio .info-section .logo {
+      height: 50px;
+      width: 70px;
+      font-size: 1rem; }
+    .portfolio .info-section .info-box {
+      display: none; }
+  .portfolio .content-area {
+    margin-left: 0;
+    width: 100%; }
+    .portfolio .content-area .img-container {
+      padding: 56px 20px 0; }
+      .portfolio .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .portfolio .content-area .profile-section {
+      width: 70%;
+      float: right;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio .info-section {
+    width: 30%;
+    padding: 56px 30px; }
+    .portfolio .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .portfolio .content-area {
+    margin-left: 30%;
+    width: 70%; }
+    .portfolio .content-area .img-container {
+      padding: 56px 20px 0; }
+      .portfolio .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .portfolio .content-area .profile-section {
+      width: 70%;
+      float: right;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .portfolio .content-area .img-container .user-img {
+      position: static;
+      width: 100%; }
+  .portfolio .content-area .profile-section {
+    width: 70%;
+    float: left;
+    padding: 20% 20px 0;
+    max-width: 800px; } }
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .portfolio .info-section {
+    width: 20%;
+    padding: 56px 30px; }
+    .portfolio .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .portfolio .content-area {
+    width: 80%;
+    margin-left: 20%; }
+    .portfolio .content-area .img-container {
+      padding: 56px 20px 0;
+      float: left; }
+      .portfolio .content-area .img-container .user-img {
+        position: static;
+        width: 100%; }
+    .portfolio .content-area .profile-section {
+      width: 70%;
+      float: left;
+      padding: 20% 60px 0;
+      max-width: 800px; } }
+
+.contact .logo {
+  text-transform: uppercase;
+  border: 5px solid white;
+  height: 130px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  line-height: 0; }
+
+.contact .info-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 54px;
+  width: 35%; }
+  .contact .info-section .info-box {
+    position: absolute;
+    bottom: 60px; }
+    .contact .info-section .info-box h4 {
+      font-size: 1.2rem;
+      color: #fefefe;
+      margin: .7rem 0; }
+    .contact .info-section .info-box p {
+      font-size: .9rem;
+      font-weight: 300;
+      color: #fefefe;
+      margin: .2rem 0 1.6rem; }
+    .contact .info-section .info-box span {
+      color: #fefefe;
+      margin: 1.3rem 0;
+      display: inline-block; }
+  .contact .info-section .icon-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 10px; }
+    .contact .info-section .icon-section a:hover {
+      color: #d930c0; }
+    .contact .info-section .icon-section a:first-child {
+      padding: 0 10px 0 0; }
+
+.contact .content-area {
+  background: #fefefe;
+  margin-left: 35%;
+  width: 65%;
+  background: white;
+  height: 100%; }
+  .contact .content-area .img-container {
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    height: 100%; }
+    .contact .content-area .img-container .form-section {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      position: absolute;
+      top: 56px;
+      left: -250px;
+      width: 500px;
+      padding: 46px;
+      height: calc(100% - 112px);
+      background: #272727;
+      color: #fefefe;
+      -webkit-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+      -moz-box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34);
+      box-shadow: 9px 20px 74px 6px rgba(0, 0, 0, 0.34); }
+      .contact .content-area .img-container .form-section form {
+        padding-bottom: 26px; }
+      .contact .content-area .img-container .form-section h4 {
+        font-size: 1.3rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem; }
+      .contact .content-area .img-container .form-section input[type="text"], .contact .content-area .img-container .form-section input[type="email"], .contact .content-area .img-container .form-section textarea {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #bdbdbd;
+        margin-bottom: 2rem;
+        font-size: .8rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        color: #bdbdbd;
+        padding: 15px 0; }
+      .contact .content-area .img-container .form-section button[type="submit"] {
+        background: #4b21ff;
+        border: none;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        text-align: center;
+        color: #fefefe;
+        font-size: 1rem;
+        padding: 17px 30px;
+        text-transform: uppercase;
+        width: 100%; }
+  .contact .content-area .contact-section {
+    display: inline-block;
+    vertical-align: top;
+    padding: 56px;
+    width: 70%;
+    float: left; }
+    .contact .content-area .contact-section .contact-info h1 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 1rem; }
+      .contact .content-area .contact-section .contact-info h1 span {
+        color: #4b21ff; }
+    .contact .content-area .contact-section .contact-info .contact-box {
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      transition: all .5s ease-in-out;
+      cursor: pointer; }
+      .contact .content-area .contact-section .contact-info .contact-box:hover {
+        -webkit-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 20px 74px 6px rgba(0, 0, 0, 0.12); }
+      .contact .content-area .contact-section .contact-info .contact-box h5 {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0 0 1.5rem; }
+      .contact .content-area .contact-section .contact-info .contact-box p {
+        color: #a9a9a9;
+        font-weight: 300;
+        line-height: 1.4;
+        margin: 0 0 2rem; }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .contact .menu-icon {
+    top: -3px;
+    right: 20px;
+    color: white; }
+    .contact .menu-icon .fas {
+      color: white; }
+  .contact .content-area {
+    height: auto; }
+    .contact .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .contact .info-section {
+    padding: 10px 20px;
+    position: static; }
+    .contact .info-section .logo {
+      height: 50px;
+      width: 70px;
+      font-size: 1rem; }
+    .contact .info-section .info-box {
+      display: none; }
+  .contact .content-area {
+    margin-left: 0;
+    width: 100%; }
+    .contact .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .contact .content-area .img-container {
+      width: 100%;
+      padding: 56px 20px 0;
+      height: auto; }
+      .contact .content-area .img-container .form-section {
+        position: static;
+        width: 100%;
+        height: auto;
+        overflow: auto; }
+    .contact .content-area .contact-section {
+      width: 100%;
+      float: left;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact .info-section .icon-section a {
+    font-size: 1.4rem; }
+  .contact .content-area {
+    height: auto; }
+    .contact .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .contact .content-area .img-container {
+      width: 100%;
+      padding: 56px 20px 0;
+      height: auto; }
+      .contact .content-area .img-container .form-section {
+        position: static;
+        width: 100%;
+        height: auto;
+        overflow: auto; }
+    .contact .content-area .contact-section {
+      width: 70%;
+      float: left;
+      padding: 20% 20px 0; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact .content-area {
+    height: auto; }
+    .contact .content-area:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .contact .content-area .img-container {
+      padding: 56px 20px 0;
+      float: left;
+      height: auto;
+      width: 100%; }
+      .contact .content-area .img-container .form-section {
+        position: static;
+        width: 100%;
+        float: left;
+        height: auto;
+        overflow: auto; }
+    .contact .content-area .contact-section {
+      width: 70%;
+      float: left;
+      padding: 20% 20px 0;
+      max-width: 800px; } }
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .contact .info-section {
+    width: 20%;
+    padding: 56px 30px; }
+    .contact .info-section .icon-section a {
+      font-size: 1.4rem; }
+  .contact .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .contact .content-area .img-container .form-section {
+      left: -157px;
+      width: 400px; }
+  .contact .content-area .contact-section {
+    width: 70%;
+    float: left;
+    padding: 20% 60px 0;
+    max-width: 800px; } }
+
+@media (min-width: 1500px) {
+  .contact .content-area .img-container {
+    padding: 56px 20px 0;
+    float: left; }
+    .contact .content-area .img-container .form-section {
+      left: -250px;
+      width: 500px; }
+  .contact .content-area .contact-section {
+    width: 70%;
+    float: left;
+    padding: 20% 60px 0;
+    max-width: 800px; } }
+
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

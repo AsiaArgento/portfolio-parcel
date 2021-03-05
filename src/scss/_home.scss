@@ -1,0 +1,256 @@
+.home{
+  .logo{
+    text-transform: uppercase;
+    border: 5px solid white;
+    height: 130px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    line-height: 0;
+  }
+  .info-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 54px;
+    width: 35%;
+    .info-box{
+      position: absolute;
+      bottom: 60px;
+
+      h4{
+        font-size: 1.2rem;
+        color: $color3;
+        margin: .7rem 0;
+      }
+      p{
+        font-size: .9rem;
+        font-weight: 300;
+        color: $color3;
+        margin: .2rem 0 1.6rem;
+      }
+      span{
+        color: $color3;
+        margin: 1.3rem 0;
+        display: inline-block;
+      }
+    }
+    .icon-section{
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 0 10px;
+        &:hover{
+          color: #d930c0;
+        }
+        &:first-child{
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  .content-area{
+    background: $color3;
+    margin-left: 35%;
+    width: 65%;
+    background: white;
+    height: 100%;
+    //padding: 0 0 0 25%;
+    .img-container{
+      display: inline-block;
+      width: 30%;
+      position: relative;
+      height: 100%;
+      .user-img{
+        position: absolute;
+        top: 56px;
+        left: -250px;
+        width: 500px;
+        height: calc(100% - 112px);
+        background-image: url(../img/matthew-moncada.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        // background: url(https://image.shutterstock.com/image-photo/asian-model-fashion-girl-tassel-260nw-678404389.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-box-shadow: 9px 20px 74px 6px rgba(0,0,0,0.34);
+        -moz-box-shadow: 9px 20px 74px 6px rgba(0,0,0,0.34);
+        box-shadow: 9px 20px 74px 6px rgba(0,0,0,0.34);
+      }
+    }
+    .profile-section{
+      display: inline-block;
+      vertical-align: top;
+      padding: 20% 0 0 0;
+      max-width: 500px;
+
+      .profile{
+        h1{
+          font-size: 2.3rem;
+          font-weight: 500;
+          line-height: 1.2;
+          margin: 0 0 1rem;
+          span{
+            color: $color1;
+          }
+        }
+        h5{
+          font-size: 1.1rem;
+          margin: 0 0 2rem;
+        }
+        p{
+          color: $color4;
+          font-weight: 300;
+          line-height: 1.4;
+          margin: 0 0 2rem;
+        }
+      }
+    }
+  }
+}
+
+// phone
+@media (max-width: 767px) {
+  .home{
+    .menu-icon{
+      top: -3px;
+      right: 20px;
+      color: white;
+      .fas{
+        color: white;
+
+      }
+    }
+    .content-area{
+      height: auto;
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    .info-section{
+      //display: none;
+      padding: 10px 20px;
+      position: static;
+      .logo{
+        height: 50px;
+        width: 70px;
+        font-size: 1rem;
+      }
+      .info-box{
+        display: none;
+      }
+    }
+    .content-area{
+      margin-left: 0;
+      width: 100%;
+      .img-container{
+        padding: 56px 20px 0;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {
+  .home{
+    .info-section{
+      width: 30%;
+      padding: 56px 30px;
+      .icon-section{
+        a{
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .content-area{
+      margin-left: 30%;
+      width: 70%;
+      .img-container{
+        padding: 56px 20px 0;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+ // laptop
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home{
+    .content-area{
+      .img-container{
+        padding: 56px 20px 0;
+        float: left;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: left;
+        padding: 20% 20px 0;
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+// extra big
+@media (min-width: 1200px) and (max-width: 1500px){
+  .home{
+    .info-section{
+      width: 20%;
+      padding: 56px 30px;
+      .icon-section{
+        a{
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .content-area{
+      width: 80%;
+      margin-left: 20%;
+      .img-container{
+        padding: 56px 20px 0;
+        float: left;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
+        //padding: 20% 20px 0;
+      }
+    }
+  }
+}

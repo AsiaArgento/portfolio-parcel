@@ -1,0 +1,302 @@
+.portfolio{
+  .logo{
+    text-transform: uppercase;
+    border: 5px solid white;
+    height: 130px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    line-height: 0;
+  }
+  .info-section{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 54px;
+    width: 20%;
+    .info-box{
+      position: absolute;
+      bottom: 60px;
+
+      h4{
+        font-size: 1.2rem;
+        color: $color3;
+        margin: .7rem 0;
+      }
+      p{
+        font-size: .9rem;
+        font-weight: 300;
+        color: $color3;
+        margin: .2rem 0 1.6rem;
+      }
+      span{
+        color: $color3;
+        margin: 1.3rem 0;
+        display: inline-block;
+      }
+    }
+    .icon-section{
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 0 10px;
+        &:hover{
+          color: #d930c0;
+        }
+        &:first-child{
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  .content-area{
+    background: $color3;
+    margin-left: 20%;
+    width: 80%;
+    min-width: 300px;
+    background: white;
+    height: 100%;
+    overflow: hidden;
+    .portfolio-section{
+      margin-bottom: 56px;
+      h1{
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 56px;
+      }
+      .project-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .project-box{
+          position: relative;
+          padding: 30px;
+          transition: all .5s ease-in-out;
+          cursor: pointer;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          height: 400px;
+
+          &:hover{
+            -webkit-box-shadow: 0px 20px 74px 6px rgba(0,0,0,0.12);
+            -moz-box-shadow: 0px 20px 74px 6px rgba(0,0,0,0.12);
+            box-shadow: 0px 20px 74px 6px rgba(0,0,0,0.12);
+          }
+
+          .grey-bg{
+            background: #efefef;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            overflow: hidden;
+            &:hover{
+              opacity: .9;
+              .project-info{
+                .project-details{
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                }
+                .project-title{
+                  transform: translate3d(0, 0, 0);
+                  opacity: 1;
+                }
+              }
+            }
+            .project-info{
+              padding: 56px;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              .project-details{
+                position: relative;
+                font-size: 1.1rem;
+                text-transform: capitalize;
+                margin: 0 0 1rem;
+                transform: translate3d(-200px, 0, 0);
+                opacity: 0;
+                transition: all .3s ease-in;
+              }
+              .project-title{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                transform: translate3d(-100px, 0, 0);
+                opacity: 0;
+                transition: all .3s ease-in .1s;
+              }
+              .fa-long-arrow-alt-right{
+                position: absolute;
+                bottom: 56px;
+                right: 56px;
+                font-size: 3rem;
+
+              }
+            }
+          }
+
+          h5{
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-bottom: 1.4rem;
+          }
+          p{
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// phone
+@media (max-width: 767px) {
+  .portfolio{
+    .menu-icon{
+      top: -3px;
+      right: 20px;
+      color: white;
+      .fas{
+        color: white;
+
+      }
+    }
+    .content-area{
+      height: auto;
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    .info-section{
+      //display: none;
+      padding: 10px 20px;
+      position: static;
+      .logo{
+        height: 50px;
+        width: 70px;
+        font-size: 1rem;
+      }
+      .info-box{
+        display: none;
+      }
+    }
+    .content-area{
+      margin-left: 0;
+      width: 100%;
+      .img-container{
+        padding: 56px 20px 0;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 991px) {
+  .portfolio{
+    .info-section{
+      width: 30%;
+      padding: 56px 30px;
+      .icon-section{
+        a{
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .content-area{
+      margin-left: 30%;
+      width: 70%;
+      .img-container{
+        padding: 56px 20px 0;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: right;
+        padding: 20% 20px 0;
+      }
+    }
+  }
+}
+
+ // laptop
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio{
+    .content-area{
+      .img-container{
+        padding: 56px 20px 0;
+        float: left;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: left;
+        padding: 20% 20px 0;
+        max-width: 800px;
+      }
+    }
+  }
+}
+
+// extra big
+@media (min-width: 1200px) and (max-width: 1500px){
+  .portfolio{
+    .info-section{
+      width: 20%;
+      padding: 56px 30px;
+      .icon-section{
+        a{
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .content-area{
+      width: 80%;
+      margin-left: 20%;
+      .img-container{
+        padding: 56px 20px 0;
+        float: left;
+        .user-img{
+          position: static;
+          width: 100%;
+        }
+      }
+      .profile-section{
+        width: 70%;
+        float: left;
+        padding: 20% 60px 0;
+        max-width: 800px;
+        //padding: 20% 20px 0;
+      }
+    }
+  }
+}
