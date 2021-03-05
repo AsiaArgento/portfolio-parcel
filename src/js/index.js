@@ -1,5 +1,5 @@
-import '../scss/main.scss'
-import '../css/main.css'
+// import '../scss/main.scss'
+// import '../css/main.css'
 
 var home = document.querySelector('.home');
 var menuIcon = document.querySelector('.menu-icon');
