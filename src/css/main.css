@@ -800,7 +800,15 @@ html, body {
 
 .portfolio .content-area .portfolio-section .project-section {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
+	grid-gap: 16px;
+}
+@media (min-width:900px){
+	.portfolio .content-area .portfolio-section .project-section {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 16px;
+	}
 }
 
 .portfolio .content-area .portfolio-section .project-section .project-box {
