@@ -253,7 +253,8 @@ html, body {
 	left: -250px;
 	width: 500px;
 	height: calc(100% - 112px);
-	background-image: url(../img/matthew-moncada.jpg);
+	opacity: .2;
+	/* background-image: url(../img/matthew-moncada.jpg); */
 	background-repeat: no-repeat;
 	background-position: center;
 	-webkit-background-size: cover;
