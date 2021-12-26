@@ -40,6 +40,10 @@
       }
     }
     .icon-section{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      width: 300px;
       a{
         color: white;
         text-decoration: none;

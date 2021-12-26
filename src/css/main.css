@@ -217,11 +217,29 @@ html, body {
 	display: inline-block;
 }
 
-.home .info-section .icon-section a {
+.info-section .icon-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-content: center;
+	width: 250px;
+}
+
+.info-section .icon-section a {
 	color: white;
 	text-decoration: none;
-	font-size: 2rem;
-	padding: 0 10px;
+	font-size: 1.6rem;
+	padding-right: 20px;
+	margin-bottom: 10px;
+}
+@media screen and (min-width:1300px) {
+	.info-section .icon-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: start;
+		align-content: center;
+		width: 300px;
+	}
 }
 
 .home .info-section .icon-section a:hover {
@@ -229,7 +247,7 @@ html, body {
 }
 
 .home .info-section .icon-section a:first-child {
-	padding: 0 10px 0 0;
+	/* padding: 0 10px 0 0; */
 }
 
 .home .content-area {
@@ -486,7 +504,7 @@ html, body {
 	color: white;
 	text-decoration: none;
 	font-size: 2rem;
-	padding: 0 10px;
+	/* padding: 0 10px; */
 }
 
 .resume .info-section .icon-section a:hover {
@@ -494,7 +512,7 @@ html, body {
 }
 
 .resume .info-section .icon-section a:first-child {
-	padding: 0 10px 0 0;
+	/* padding: 0 10px 0 0; */
 }
 
 .resume .content-area {
@@ -766,8 +784,8 @@ html, body {
 .portfolio .info-section .icon-section a {
 	color: white;
 	text-decoration: none;
-	font-size: 2rem;
-	padding: 0 10px;
+	font-size: 1.4rem;
+	/* padding: 0 10px; */
 }
 
 .portfolio .info-section .icon-section a:hover {
@@ -775,7 +793,7 @@ html, body {
 }
 
 .portfolio .info-section .icon-section a:first-child {
-	padding: 0 10px 0 0;
+	/* padding: 0 10px 0 0; */
 }
 
 .portfolio .content-area {
@@ -1090,8 +1108,8 @@ html, body {
 .contact .info-section .icon-section a {
 	color: white;
 	text-decoration: none;
-	font-size: 2rem;
-	padding: 0 10px;
+	font-size: 1.6rem;
+	/* padding: 0 10px; */
 }
 
 .contact .info-section .icon-section a:hover {
@@ -1099,7 +1117,7 @@ html, body {
 }
 
 .contact .info-section .icon-section a:first-child {
-	padding: 0 10px 0 0;
+	/* padding: 0 10px 0 0; */
 }
 
 .contact .content-area {
